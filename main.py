@@ -55,10 +55,10 @@ def transform_data(df: DataFrame) -> DataFrame:
     Returns:
         DataFrame: nuevo dataframe con columna de fecha
     """
-    fecha_Proceso = datetime.today()
+    fecha_proceso = datetime.today()
     logger.info(
         f'Creando la columna fecha de proceso con la fecha {fecha_proceso}')
-    df['fecha_proceso'] = fecha_Proceso
+    df['fecha_proceso'] = fecha_proceso
     return df
 
 
