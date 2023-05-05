@@ -1,13 +1,25 @@
-INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
-INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
-INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
-INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
-INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
-INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
-INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
-INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
-INFO:root:renombrando columnas en el df con "-".join(['fipstxt', 'state', 'county_name', 'persistent_poverty', 'persistent_related_child', 'metro_nonmetro_status'])
-INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
-INFO:root:renombrando columnas en el df con "-".join(['fipstxt', 'state', 'county_name', 'persistent_poverty', 'persistent_related_child', 'metro_nonmetro_status'])
-INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
-INFO:root:renombrando columnas en el df con "-".join(['fipstxt', 'state', 'county_name', 'persistent_poverty', 'persistent_related_child', 'metro_nonmetro_status'])
+2023-05-05 18:48:31 [INFO] root: leyendo archivo en la ruta ./2015_persistent_povert.csv (Line: 22)
+2023-05-05 18:48:31 [INFO] root: renombrando columnas en el df con "-".join(['fipstxt', 'state', 'county_name', 'persistent_poverty', 'persistent_related_child', 'metro_nonmetro_status']) (Line: 40)
+2023-05-05 18:49:09 [INFO] root: leyendo archivo en la ruta ./2015_persistent_povert.csv (Line: 22)
+2023-05-05 18:49:09 [INFO] root: renombrando columnas en el df con fipstxt-state-county_name-persistent_poverty-persistent_related_child-metro_nonmetro_status (Line: 40)
+2023-05-05 18:51:02 [INFO] root: leyendo archivo en la ruta ./2015_persistent_povert.cs (Line: 22)
+2023-05-05 18:51:02 [ERROR] root: no se pudo leer el path: ./2015_persistent_povert.cs, [Errno 2] No such file or directory: './2015_persistent_povert.cs' (Line: 26)
+2023-05-05 18:51:02 [INFO] root: renombrando columnas en el df con fipstxt-state-county_name-persistent_poverty-persistent_related_child-metro_nonmetro_status (Line: 40)
+2023-05-05 18:51:02 [ERROR] root: No se pudo actualizar las columnas 'NoneType' object has no attribute 'columns' (Line: 44)
+2023-05-05 18:51:40 [INFO] root: leyendo archivo en la ruta ./2015_persistent_povert.cs (Line: 22)
+2023-05-05 18:51:40 [ERROR] root: no se pudo leer el path: ./2015_persistent_povert.cs, [Errno 2] No such file or directory: './2015_persistent_povert.cs' (Line: 26)
+2023-05-05 18:52:43 [INFO] root: leyendo archivo en la ruta ./2015_persistent_povert.cs (Line: 22)
+2023-05-05 18:52:43 [ERROR] root: no se pudo leer el path: ./2015_persistent_povert.cs, [Errno 2] No such file or directory: './2015_persistent_povert.cs' (Line: 26)
+2023-05-05 18:52:43 [INFO] root: renombrando columnas en el df con fipstxt-state-county_name-persistent_poverty-persistent_related_child-metro_nonmetro_status (Line: 40)
+2023-05-05 18:52:43 [ERROR] root: No se pudo actualizar las columnas 'NoneType' object has no attribute 'columns' (Line: 44)
+2023-05-05 18:55:34 [INFO] root: leyendo archivo en la ruta ./2015_persistent_povert.cs (Line: 22)
+2023-05-05 18:55:34 [ERROR] root: no se pudo leer el path: ./2015_persistent_povert.cs, [Errno 2] No such file or directory: './2015_persistent_povert.cs' (Line: 26)
+2023-05-05 18:55:34 [INFO] root: renombrando columnas en el df con fipstxt-state-county_name-persistent_poverty-persistent_related_child-metro_nonmetro_status (Line: 40)
+2023-05-05 18:55:34 [ERROR] root: No se pudo actualizar las columnas 'NoneType' object has no attribute 'columns' (Line: 44)
+2023-05-05 18:55:43 [INFO] root: leyendo archivo en la ruta ./2015_persistent_povert.csv (Line: 22)
+2023-05-05 18:55:43 [INFO] root: renombrando columnas en el df con fipstxt-state-county_name-persistent_poverty-persistent_related_child-metro_nonmetro_status (Line: 40)
+2023-05-05 18:56:01 [INFO] root: leyendo archivo en la ruta ./2015_persistent_povert.csv (Line: 22)
+2023-05-05 18:56:01 [INFO] root: renombrando columnas en el df con fipstxt-state-county_name-persistent_poverty-persistent_related_child-metro_nonmetro_status (Line: 40)
+2023-05-05 18:57:57 [INFO] root: leyendo archivo en la ruta ./2015_persistent_povert.csv (Line: 22)
+2023-05-05 18:57:57 [INFO] root: renombrando columnas en el df con fipstxt-state-county_name-persistent_poverty-persistent_related_child-metro_nonmetro_status (Line: 40)
+2023-05-05 18:57:57 [INFO] root: Creando la columna fecha de proceso con la fecha {fecha_proceso} (Line: 59)

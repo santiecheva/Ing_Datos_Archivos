@@ -1,8 +1,10 @@
 import pandas as pd
 from pandas import DataFrame
 import logging
-
-logging.basicConfig(filename='execution.log',
+from datetime import datetime
+MSG_FORMAT = "%(asctime)s [%(levelname)s] %(name)s: %(message)s (Line: %(lineno)d)"
+DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S"
+logging.basicConfig(filename='execution.log', format=MSG_FORMAT, datefmt=DATETIME_FORMAT,
                     encoding='utf-8', level=logging.INFO)
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -35,7 +37,7 @@ def clean_columns(df: DataFrame, columns: list) -> DataFrame:
         DataFrame: dtaa frame con nuevas columnas
     """
     try:
-        logger.info(f'renombrando columnas en el df con "-".join({columns})')
+        logger.info(f'renombrando columnas en el df con {"-".join(columns)}')
         df.columns = columns
         return df
     except Exception as error:
@@ -44,7 +46,20 @@ def clean_columns(df: DataFrame, columns: list) -> DataFrame:
     return df
 
 
-"fipstxt", "state", "County Name", "Persistent Poverty  0=Not persistent poverty 1=Persistent pover", "Persistent Related Child Poverty 0=Not persistent child poverty", "Metro-nonmetro status, 2013 0=Nonmetro 1=Metro"
+def transform_data(df: DataFrame) -> DataFrame:
+    """Agrega columna de fecha de proceso en un archivo maestro
+
+    Args:
+        df (DataFrame): datos a tratar
+
+    Returns:
+        DataFrame: nuevo dataframe con columna de fecha
+    """
+    fecha_Proceso = datetime.today()
+    logger.info(
+        f'Creando la columna fecha de proceso con la fecha {fecha_proceso}')
+    df['fecha_proceso'] = fecha_Proceso
+    return df
 
 
 def run():
@@ -53,6 +68,7 @@ def run():
     path = './2015_persistent_povert.csv'
     df = read_file(path)
     df = clean_columns(df, columns)
+    df = transform_data(df)
     print(df.dtypes)
 
 
