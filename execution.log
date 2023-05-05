@@ -1,2 +1,13 @@
 INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
 INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
+INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
+INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
+INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
+INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
+INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
+INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
+INFO:root:renombrando columnas en el df con "-".join(['fipstxt', 'state', 'county_name', 'persistent_poverty', 'persistent_related_child', 'metro_nonmetro_status'])
+INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
+INFO:root:renombrando columnas en el df con "-".join(['fipstxt', 'state', 'county_name', 'persistent_poverty', 'persistent_related_child', 'metro_nonmetro_status'])
+INFO:root:leyendo archivo en la ruta ./2015_persistent_povert.csv
+INFO:root:renombrando columnas en el df con "-".join(['fipstxt', 'state', 'county_name', 'persistent_poverty', 'persistent_related_child', 'metro_nonmetro_status'])
