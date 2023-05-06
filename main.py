@@ -59,17 +59,39 @@ def transform_data(df: DataFrame) -> DataFrame:
     logger.info(
         f'Creando la columna fecha de proceso con la fecha {fecha_proceso}')
     df['fecha_proceso'] = fecha_proceso
+    df['year'] = fecha_proceso.year
+    df['month'] = fecha_proceso.month
+    df['day'] = fecha_proceso.day
+    return df
+
+
+def resultand_dataframe(path: str, columns: list) -> DataFrame:
+    df = read_file(path)
+    df = clean_columns(
+        df, columns)
+    df = transform_data(df)
     return df
 
 
 def run():
-    columns = ['fipstxt', 'state', 'county_name',
-               'persistent_poverty', 'persistent_related_child', 'metro_nonmetro_status']
-    path = './2015_persistent_povert.csv'
-    df = read_file(path)
-    df = clean_columns(df, columns)
-    df = transform_data(df)
-    print(df.dtypes)
+    persistent_povert_columns = ['fipstxt', 'state', 'county_name',
+                                 'persistent_poverty', 'persistent_related_child', 'metro_nonmetro_status']
+    county_columns = [
+        "fipstxt", "state", "county_name", "metro_nonmetro_status", "economic_types", "economic_type_label", "farming_2015_update", "Mining_2015-Update", "manufacturing_2015_update", "government_2015_update", "recreation_2015_update", "nonspecialized_2015_update", "low_education_2015_update", "low_employment_cnty_2008_2012_25_64", "pop_loss_2010", "retirement_dest_2015_update", "persistent_poverty_2013", "persistent_related_child_poverty_2013"
+    ]
+    county_path = './county_typology_codes.csv'
+    persistent_povert_path = './2015_persistent_povert.csv'
+    persistent_povert_df = resultand_dataframe(
+        path=persistent_povert_path, columns=persistent_povert_columns)
+    county_df = resultand_dataframe(path=county_path, columns=county_columns)
+
+    df_merge = persistent_povert_df.merge(
+        county_df, how='inner', left_on='county_name', right_on='county_name')
+
+    df_merge.to_parquet('./merge_paritions', compression='snappy',
+                        partition_cols=['year_y', 'month_y', 'day_y'])
+
+    print(df_merge.columns)
 
 
 run()
